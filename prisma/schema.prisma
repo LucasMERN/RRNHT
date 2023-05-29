@@ -8,9 +8,28 @@ datasource db {
 }
 
 model User {
-  id        String    @id @default(uuid())
-  createdAt DateTime  @default(now())
-  badgenumber  Int
-  firstName String
-  lastName  String
+  id          String   @id @default(uuid())
+  createdAt   DateTime @default(now())
+  badgenumber Int
+  firstName   String
+  lastName    String
+  completed   ModuleCompletion[]
+}
+
+model Module {
+  id        String   @id @default(uuid())
+  title     String
+  thumbnail String?
+  completedBy ModuleCompletion[]
+}
+
+model ModuleCompletion {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  module    Module   @relation(fields: [moduleId], references: [id])
+  userId    String
+  moduleId  String
+
+  @@unique([userId, moduleId])
 }
