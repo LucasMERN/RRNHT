@@ -6,10 +6,8 @@ const { courses } = JSON.parse(jsonData)
 
 async function main() {
   
-    const user = await db.user.upsert({
-        where: { id: '1' },
-        update: {},
-        create: {
+    const user = await db.user.create({
+        data: { 
             badge: 12345,
             firstName: 'Lucas',
             lastName: 'Winkler',
