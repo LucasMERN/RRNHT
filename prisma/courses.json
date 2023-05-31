@@ -115,52 +115,61 @@
                     "images": ["PLACE IMAGE HERE"]
                 },
                 {
-                    "id": 1,
+                    "id": 6,
                     "title": "Drawing Number",
                     "information": ["Assembly drawings - are a type of technical drawing used to represent items that consist of more than one component. They show how those components fit together and may be in the form of, orthogonal plans, sections and elevations, or three-dimensional views.The location of assemblies may be shown on general arrangement drawings, or sometimes on detail drawings. The components that form the assembly may be shown shop drawings that allow their fabrication. Assembly drawings may also show assembled components, or an exploded view of the relationship between components and how they fit together. For example, they may be used to show how to assemble the parts of a kit such as furniture, how to assemble a complex part of a building (an assembly), or the relationship between several details."],
                     "images": ["PLACE IMAGE HERE"]
                 },
                 {
-                    "id": 6,
+                    "id": 7,
                     "title": "Bill of Materials (BOM)",
                     "information": ["A bill of materials (BOM) [Figure 1E] is an extensive list of raw materials, components, and instructions required to construct, manufacture, or repair a product or service. A bill of materials usually appears in a hierarchical format, with the highest level displaying the finished product and the bottom level showing individual components and materials. There are different types of bills of materials specific to engineering used in the design process; they're also specific to the manufacturing used in the assembly process."],
                     "images": ["PLACE IMAGE HERE"]
                 },
                 {
-                    "id": 7,
+                    "id": 8,
                     "title": "Notes Block",
                     "information": ["Notes are added to drawings for various reasons. Some of these notes refer to methods of attachment or construction. Others give alternatives, so that the drawing can be used for different styles of the same object. Still others list modifications that are available. Notes may be found alongside the item that they refer to. If the notes are lengthy, they may be placed elsewhere on the drawing and identified by letters or numbers. Notes are used only when the information cannot be conveyed in the conventional manner or when it is desirable to avoid crowding the drawing. [Figure 1C] illustrates one method of depicting notes.", "When the note refers to a specific part, a light line with an arrowhead leads from the note to the part. If it applies to more than one part, the note is worded to eliminate ambiguity as to the parts it pertains to. If there are several notes, they are generally grouped together and numbered consecutively."],
                     "images": ["PLACE IMAGE HERE"]
                 },
                 {
-                    "id": 8,
+                    "id": 9,
                     "title": "Revision Block",
                     "information": [""],
                     "images": ["PLACE IMAGE HERE"]
                 },
                 {
-                    "id": 9,
+                    "id": 10,
                     "title": "Zone Numbers",
                     "information": ["Zone Numbers - border of a drawing is the line that defines the outer boundary of the drawing sheet. Drawing zones are separate, rectangular cells on the drawing sheet which are lettered in the vertical direction and numbered in the horizontal direction. Example to find the over key on the bore is zine B-2 on (see image)"],
                     "images": ["PLACE IMAGE HERE"]
                 },
                 {
-                    "id": 10,
+                    "id": 11,
                     "title": "Lines on Engineering Drawings",
                     "information": ["It’s critical to know each line type and what it means. There are three different kinds of lines:", "Hidden line: Denotes that the edge is hidden behind a face.", "Centerlines: created to show the assembly’s exact geometric center. They’re made up of a sequence of shorter and longer dashes.", "Symmetry line: symmetry lines are used when partial views of symmetrical parts are drawn.", "Extension line — a thin, solid line perpendicular to a dimension line, indicating which feature is associated with the dimension.", "Leader line — a thin, solid line with arrow drawn under an angle & indicating the feature with which a dimension or note is associated."],
                     "images": ["PLACE IMAGE HERE"]
                 },
                 {
-                    "id": 11,
+                    "id": 12,
                     "title": "Lines on Engineering Drawings (continued)",
                     "information": ["Break line: are used when it is desirable to shorten the view of long part.", "Cutting-Plane line: line is used to designate where an imaginary cutting took place.", "Visible line: An edge is visible in the appropriate view.", "Section line: section lining is used to indicate the surface in the section view imaged to have been cut along the cutting plane line.", "Viewing-Plane line: is used to indicate direction of sight when a partial view is used.", "Phantom line: Usually used to show a moving item in a different location. When the object makes using a traditional form of break impossible, this symbol is also used to signify a break."],
                     "images": ["PLACE IMAGE HERE"]
                 },
                 {
-                    "id": 12,
+                    "id": 13,
                     "title": "Engineering Drawings Information",
                     "information": ["Dimension — the numerical value that defines the size, shape, location, surface texture, or geometric characteristic of a feature.", "Basic dimension — a numerical value defining the theoretically exact size, location, or orientation relative to a coordinate system. Basic dimensions are enclosed in a rectangular box & have no tolerance.", "Reference dimension — a numerical value enclosed in parentheses, provided for information only.", "Dimension line- is the thin solid line which shows the extent and direction of a dimension.", "Arrows — symbols at the ends of dimension lines showing the limits of the dimension, leaders, and cutting plane lines.", "Extension line - is the thin solid line perpendicular to a dimension line indicating which feature is associated with the dimension.", "Visible gap — there should be a visible gap of 1 mm between the feature's corners and the end of the extension line.", "Leader line - is the thin solid line used to indicate the feature with which a dimension, note, or symbol is associated.", "Limits of size — the largest acceptable size and the minimum acceptable size of a feature.", "Plus and minus dimension — the allowable positive and negative variance from the specified dimension.", "Diameter symbol — a symbol indicating that the dimension shows the diameter of a circle. The symbol used is the Greek letter phi Ø.", "Radius symbol — a symbol indicating that the dimension shows the radius of a circle. The radius symbol used is the capital letter R."],
                     "images": ["PLACE IMAGE HERE"]
+                }
+            ],
+            "tests": [
+                {
+                    "id": 1,
+                    "title": "",
+                    "information": "",
+                    "images": "",
+                    "answers": []
                 }
             ]
         },
@@ -175,6 +184,15 @@
                     "title": "Machine shop talk vs Math class talk",
                     "information": [""],
                     "images": ["PLACE IMAGE HERE"]
+                }
+            ],
+            "tests": [
+                {
+                    "id": 1,
+                    "title": "",
+                    "information": "",
+                    "images": "",
+                    "answers": []
                 }
             ]
         }
