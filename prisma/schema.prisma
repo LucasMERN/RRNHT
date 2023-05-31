@@ -15,7 +15,7 @@ enum USER_ROLE {
 model User {
   id             String           @id @default(uuid())
   createdAt      DateTime         @default(now())
-  badge          Int?             @unique
+  badge          Int             @unique
   firstName      String
   lastName       String
   role           USER_ROLE        @default(REGULAR)
@@ -60,7 +60,7 @@ model Test {
   title       String
   information String
   images      String
-  answers     String[]
+  answers     Float[]
   scores      TestScores[]
   Course      Course       @relation(fields: [courseId], references: [id])
   courseId    String

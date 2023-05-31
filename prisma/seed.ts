@@ -2,7 +2,7 @@ import { db } from "@/lib/db";
 import fs from 'fs'
 
 const jsonData = fs.readFileSync('prisma/courses.json', 'utf8')
-const courses = JSON.parse(jsonData)
+const { courses } = JSON.parse(jsonData)
 
 async function main() {
   
@@ -16,14 +16,13 @@ async function main() {
         }
     });
 
-    for(const key in courses){
-        const trainingCourse = courses[key];
+    for(const key of courses){
 
         const course = await db.course.create({
             data: {
-                title: trainingCourse.title,
-                thumbnail: trainingCourse.thumbnail,
-                trophy: trainingCourse.trophy,
+                title: key.title,
+                thumbnail: key.thumbnail,
+                trophy: key.trophy,
             }
         });
 
@@ -35,7 +34,7 @@ async function main() {
             },
         });
 
-        for (const myModule of trainingCourse.modules) {
+        for (const myModule of key.modules) {
             const courseModule = await db.courseModule.create({
                 data: {
                     title: myModule.title,
@@ -46,8 +45,7 @@ async function main() {
             });
         }
 
-        if(trainingCourse.tests){
-            for (const tests of trainingCourse.tests) {
+            for (const tests of key.tests) {
                 const test = await db.test.create({
                     data: {
                         title: tests.title,
@@ -62,13 +60,12 @@ async function main() {
                     data: {
                         score: 0,
                         user: { connect: { id: user.id } },
-                        test: { connect: { id: course.id } },
+                        test: { connect: { id: test.id } },
                     },
                 });
             }
         }
     }
-}
 
 main()
     .then(async () => {

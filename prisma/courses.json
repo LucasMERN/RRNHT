@@ -66,14 +66,14 @@
                     "id": 1,
                     "title": "Caliper Quiz",
                     "information": "Input the correct measurment for each corresponding letter in the diagram",
-                    "images": ["PLACE IMAGES HERE"],
+                    "images": "PLACE IMAGES HERE",
                     "answers": [1.500, 1.532, 5.621, 1.142, 3.666, 2.515, 2.365, 2.515, 4.887, 0.271, 4.443, 5.621]
                 }, 
                 {
                     "id": 2,
                     "title": "Micrometer Quiz",
                     "information": "Input the correct measurment for each corresponding letter in the diagram",
-                    "images": ["PLACE IMAGES HERE"],
+                    "images": "PLACE IMAGES HERE",
                     "answers": [0.125, 0.399, 0.481, 0.063, 0.033, 0.198]
                 }
             ]
@@ -168,7 +168,7 @@
             "id": 3,
             "title": "Shop Talk",
             "thumbnail": "PLACE IMAGE HERE",
-            "trophy": "PLACE IMAGE HERE",
+            "trophy": "Smooth Talker",
             "modules": [
                 {
                     "id": 1,
