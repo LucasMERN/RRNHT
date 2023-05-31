@@ -36,7 +36,7 @@ async function main() {
         });
 
         for (const myModule of trainingCourse.modules) {
-            const courseModule = await db.module.create({
+            const courseModule = await db.courseModule.create({
                 data: {
                     title: myModule.title,
                     information: myModule.information,
