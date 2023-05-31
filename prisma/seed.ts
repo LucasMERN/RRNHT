@@ -10,7 +10,7 @@ async function main() {
         where: { id: '1' },
         update: {},
         create: {
-            badgeNumber: 12345,
+            badge: 12345,
             firstName: 'Lucas',
             lastName: 'Winkler',
         }
