@@ -1,0 +1,182 @@
+{
+    "courses":[
+        {
+            "id": 1,
+            "title": "Using Precision Tools",
+            "thumbnail": "PLACE IMAGE HERE",
+            "trophy": "Precision Measuring",
+            "modules": [
+                {
+                    "id": 1,
+                    "title": "Calipers",
+                    "information": ["Calipers are a tool used to measure the distance between two opposite sides of an object. Calipers are meant for measuring thickness and internal/external diameters that are inaccessible to a scale. This tool has been used for thousands of years, dating back to ancient Rome and China. Calipers are used in many types of disciplines, including: medicine, science, mechanical engineering, woodworking, metalworking, and even forestry."],
+                    "images": ["PLACE IMAGE HERE"]
+                }, 
+                {
+                    "id": 2,
+                    "title": "What are the parts of a dial Calipers?",
+                    "information": ["Inside/Upper Measuring jaws: Used for taking inside measurements such as the diameter of a hole or slot.", "Outside/ Lower Measuring jaws: Used for measuring outside dimensions such as width, length and diameter.", "Depth blade: A small rod that protrudes when the thumbscrew is turned. The rod is used for measuring the depth of holes.", "Step gauge: Measures the distance from an edge to another point on an object.", "Scale: Runs along the beam of the caliper. This gives you the measurement reading.", "Fine Adjustment Thumbwheel: Adjusts the measuring faces of the caliper (the jaws and the depth rod).", "Dial Clamp Screw: Secures the jaws into place so the object is removed without moving the caliper's jaws."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 3,
+                    "title": "What Types Of Measurements Can Be Taken With A Caliper?",
+                    "information": ["Outside: To take an outside measurement, slide the caliper jaws open, and place the caliper over the object to be measured. Slide the jaws until they contact the workpiece.", "Inside: To take an inside measurement, you must slide the caliper closed, and place the inside-measuring jaws (found at the top of the caliper) into the space to be measured. Slide the jaws apart as far as they can go to obtain the inside measurement.", "Depth: To measure depth, utilize the depth blade that extends out the bottom (or far end) of the caliper. Press the main bar of the caliper against the top of the hole, and then open the caliper until the depth blade hits bottom to determine the depth of the object you are measuring.", "Step: To determine the step measurement, open the caliper and place the caliper's sliding jaw on the upper step of the workpiece. Then, open the caliper until the fixed jaw contacts the lower step."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 4,
+                    "title": "Follow This Simple Four-Step Process to Reading Dial Calipers:",
+                    "information": ["STEP 1: Read the whole inch (example: 1.000) measurement first. Just like on any ruler, yard stick, tape measurer, etc., if it’s one inch or more, we read the whole inch (or inches) measurement first. In this example, we have one inch.", "STEP 2: Next, read the whole tenth of an inch (example: 1.300). On the main scale of your calipers, each inch is divided into ten parts, making each one a tenth of an inch. After you read the inches, notice how many whole tenths past the inch can be seen. In this example, we have one inch and two hundred thousandths.", "STEP 3: Now read the hundredths (example: 1.310). The needle makes one full revolution around the dial for each tenth of an inch. The dial has 100 equally spaced lines, and every tenth line has a two-digit number (eg.: 10, 20, 30, etc.) Read the last number that the needle goes past. Our example above is one inch and two hundred, thirty thousandths.", "STEP 4: Finally, read the thousandths (example: 1.315). Count the number of lines between the needle and the last two-digit number and add them to that two-digit number. The result we have in the example here is one inch and two hundred, thirty-four thousandths."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 5,
+                    "title": "Dial Caliper Tech Tips",
+                    "information": ["Maintenance & Cleaning: Before use, gently but thoroughly remove oil, dust and dirt from the entire surface of the dial caliper, taking care not to damage the measuring or reference faces.", "Zero Point Confirmation: Before taking a measurement, clean and close the jaws and check that the dial needle points to '0' on the dial face.", "Dial Caliper Usage: Properly close the caliper on the workpiece. Do not allow dirt, chips, etc., to enter the rack. Otherwise, the rack and pinion could be damaged, which would result in reduced accuracy and improper zero adjustment.", "Caliper Storage: When not in use, properly store your caliper in an environment free of heat, dust, humidity, oil, and mist."],
+                    "images": ["PLACE IMAGES HERE"]
+                },
+                {
+                    "id": 6,
+                    "title": "Micrometer",
+                    "information": ["A micrometer is a precision measuring instrument, used to obtain very fine measurements and available in metric and imperial versions. Metric micrometers typically measure in 0.01mm increments and imperial versions in 0.001 inches.", "The measurements they provide can be more accurate than those given by other measuring devices such as dial calipers or vernier calipers but depend very much on the user’s care."],
+                    "images": ["PLACE IMAGES HERE"]
+                },
+                {
+                    "id": 7,
+                    "title": "What are the parts of an Outside Micrometer?",
+                    "information": ["ANIVIL & SPINDLE: Objects to be measured are placed between the measuring faces; the anvil and the spindle. The anvil is the stationary measuring face against which parts are held until the spindle makes contact with the work. The threaded spindle is the moving measuring face of the micrometer.", "SLEEVE: The scale on the sleeve of the micrometer is the instrument’s primary measuring scale. Together with the thimble scale, the sleeve scale displays the measurement taken.", "THIMBLE: The secondary measuring scale, the thimble scale, provides the two remaining significant figures of a measurement. This part of the measurement is the value on the scale that aligns with the index line on the sleeve scale. When the thimble is turned, the spindle rotates and alters the distance between the measuring faces of the micrometer. Some micrometer thimbles incorporate a friction drive. This allows for a more accurate reading, particularly when used by the inexperienced user.", "SPINDLE LOCK: The locking device secures the spindle and preserves the measurement so that the micrometer can be removed from the workpiece before taking the reading. Some micrometers have a lock nut, whilst others may have a spindle lock lever (see image).", "FRAME: The u-shaped frame is designed to be rigid and stable. It supports the anvil and the sleeve of the micrometer. The frame is held by the user whilst measurements are taken."],
+                    "images": ["PLACE IMAGES HERE"]
+                },
+                {
+                    "id": 8,
+                    "title": "The three Steps of Measuring With A Micrometer:",
+                    "information": ["Clean the micrometer: Use soft cloth to wipe down the anvil and the spindle of the micrometer. Removing any dust or debris present on the measuring faces will ensure precise measurement.", "Begin to measure: Place the object you are measuring against the micrometer’s anvil. Tighten the device until the spindle is firmly pressed against the object. If you need to prevent your thimble from turning, use the locking lever or wheel to secure it in place. You can also fasten the frame on a micrometer stand to free up both of your hands if so desired. (figure 2)", "Read the measurement: Follow the four-step measuring process, noted in next slide."],
+                    "images": ["PLACE IMAGES HERE"]
+                },
+                {
+                    "id": 9,
+                    "title": "Follow This Simple Four-Step Process to read MICROMETERs:",
+                    "information": ["STEP 1: Read the sleeve measurement", "STEP 2: Next, read the thimble measurement", "STEP 3: Now read the vernier The vernier will provide the ten-thousandths place of your decimal measurement.", "STEP 4: Finally, add it up! Add step 2 to step 1 (add your thimble measurement to our sleeve measurement), and then just 'tack' step 3 (your vernier measurement) onto the end. As an example, if you're measuring something that is 0.1234 of an inch, you'd find the .100 on the sleeve (step 1), the .023 on the thimble (step 2), and then you'd add . 023 to .100 for a combined .123. Then, you'd find .0004 on the vernier scale and just tack that onto the end.", "TECH TIP: Sometimes, for people who are learning this, when you have .123, and you see the .0004 on the vernier scale, it's easy to misunderstand, leave out a zero (.004), add it to .123 and get .127. It's easier to understand if you forget about the zeroes and just put the number from the vernier scale onto the fourth place (the ten-thousandths place), at the end of the .123, to obtain the correct measurement of .1234."],
+                    "images": ["PLACE IMAGES HERE"]
+                }
+            ],
+            "tests": [
+                {
+                    "id": 1,
+                    "title": "Caliper Quiz",
+                    "information": "Input the correct measurment for each corresponding letter in the diagram",
+                    "images": ["PLACE IMAGES HERE"],
+                    "answers": [1.500, 1.532, 5.621, 1.142, 3.666, 2.515, 2.365, 2.515, 4.887, 0.271, 4.443, 5.621]
+                }, 
+                {
+                    "id": 2,
+                    "title": "Micrometer Quiz",
+                    "information": "Input the correct measurment for each corresponding letter in the diagram",
+                    "images": ["PLACE IMAGES HERE"],
+                    "answers": [0.125, 0.399, 0.481, 0.063, 0.033, 0.198]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Understanding Blueprints",
+            "thumbnail": "PLACE IMAGE HERE",
+            "trophy": "Blueprint Connoisseur",
+            "modules": [
+                {
+                    "id": 1,
+                    "title": "Engineering Drawings",
+                    "information": ["An engineering drawing offers a lot more specific information and requirements, including: Dimensions, Geometry, Tolerances, Material type, Finish, Hardware", "Engineering drawings (aka, Blueprints, manufacturing blueprints, prints, manufacturing prints, dimensional prints, drawings, mechanical drawings, and more) are a rich and specific outline that shows all the information and requirements needed to manufacture an item or product. It is more than simply a drawing; it is a graphical language that communicates ideas and information."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 2,
+                    "title": "Engineering Drawings: Blocks of Information?",
+                    "information": ["Engineering drawings are used to communicate design ideas and technical information to engineers and other professionals throughout the design process. An engineering drawing represents a complex three-dimensional object on a two-dimensional piece of paper or computer screen by a process called projection."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 3,
+                    "title": "Engineering Drawings: Title Blocks of Information?",
+                    "information": [""],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 4,
+                    "title": "Title Block",
+                    "information": ["Begin by reading the title block, which may be located in the drawing’s bottom right-hand corner. Additional information blocks are similar, but the title block serves as the context for seeing the drawing.(See Image) The title block includes details such as: Material,  Mass,  Finish,  Tolerances in general,  Specifics of the projection,  The scale of the drawing,  Numbers of revisions,  The drawing’s current state (Preliminary, Approved, etc.),  The firm or organization that created or owned the drawing’s name and address,  Identification of the part and its description,  The following are the units that were used in the drawing: Keep in mind that any information in the notes outside the title block that contradicts the title block information should be regarded as correct and should take precedence over the title block information."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 5,
+                    "title": "Tolerance Block",
+                    "information": ["Tolerance block - is a section on an engineering drawing or blueprint that identifies tolerances for a dimension that aren’t specifically called out on the print. Because there is no tolerance called out, the tolerance in a tolerance block (general tolerances) would be applied to this specific dimension. The contents of the tolerance block are often referred to as the general tolerances. Depending on the units used on the blueprint, the tolerance block can be specified in metric or imperial (inch) units.", "Geometrical tolerances - are used to convey in a brief and precise manner complete geometrical requirements on engineering drawings. They should always be considered for surfaces which come into contact with other parts, especially when close tolerances are applied to the features concerned."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 1,
+                    "title": "Drawing Number",
+                    "information": ["Assembly drawings - are a type of technical drawing used to represent items that consist of more than one component. They show how those components fit together and may be in the form of, orthogonal plans, sections and elevations, or three-dimensional views.The location of assemblies may be shown on general arrangement drawings, or sometimes on detail drawings. The components that form the assembly may be shown shop drawings that allow their fabrication. Assembly drawings may also show assembled components, or an exploded view of the relationship between components and how they fit together. For example, they may be used to show how to assemble the parts of a kit such as furniture, how to assemble a complex part of a building (an assembly), or the relationship between several details."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 6,
+                    "title": "Bill of Materials (BOM)",
+                    "information": ["A bill of materials (BOM) [Figure 1E] is an extensive list of raw materials, components, and instructions required to construct, manufacture, or repair a product or service. A bill of materials usually appears in a hierarchical format, with the highest level displaying the finished product and the bottom level showing individual components and materials. There are different types of bills of materials specific to engineering used in the design process; they're also specific to the manufacturing used in the assembly process."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 7,
+                    "title": "Notes Block",
+                    "information": ["Notes are added to drawings for various reasons. Some of these notes refer to methods of attachment or construction. Others give alternatives, so that the drawing can be used for different styles of the same object. Still others list modifications that are available. Notes may be found alongside the item that they refer to. If the notes are lengthy, they may be placed elsewhere on the drawing and identified by letters or numbers. Notes are used only when the information cannot be conveyed in the conventional manner or when it is desirable to avoid crowding the drawing. [Figure 1C] illustrates one method of depicting notes.", "When the note refers to a specific part, a light line with an arrowhead leads from the note to the part. If it applies to more than one part, the note is worded to eliminate ambiguity as to the parts it pertains to. If there are several notes, they are generally grouped together and numbered consecutively."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 8,
+                    "title": "Revision Block",
+                    "information": [""],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 9,
+                    "title": "Zone Numbers",
+                    "information": ["Zone Numbers - border of a drawing is the line that defines the outer boundary of the drawing sheet. Drawing zones are separate, rectangular cells on the drawing sheet which are lettered in the vertical direction and numbered in the horizontal direction. Example to find the over key on the bore is zine B-2 on (see image)"],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 10,
+                    "title": "Lines on Engineering Drawings",
+                    "information": ["It’s critical to know each line type and what it means. There are three different kinds of lines:", "Hidden line: Denotes that the edge is hidden behind a face.", "Centerlines: created to show the assembly’s exact geometric center. They’re made up of a sequence of shorter and longer dashes.", "Symmetry line: symmetry lines are used when partial views of symmetrical parts are drawn.", "Extension line — a thin, solid line perpendicular to a dimension line, indicating which feature is associated with the dimension.", "Leader line — a thin, solid line with arrow drawn under an angle & indicating the feature with which a dimension or note is associated."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 11,
+                    "title": "Lines on Engineering Drawings (continued)",
+                    "information": ["Break line: are used when it is desirable to shorten the view of long part.", "Cutting-Plane line: line is used to designate where an imaginary cutting took place.", "Visible line: An edge is visible in the appropriate view.", "Section line: section lining is used to indicate the surface in the section view imaged to have been cut along the cutting plane line.", "Viewing-Plane line: is used to indicate direction of sight when a partial view is used.", "Phantom line: Usually used to show a moving item in a different location. When the object makes using a traditional form of break impossible, this symbol is also used to signify a break."],
+                    "images": ["PLACE IMAGE HERE"]
+                },
+                {
+                    "id": 12,
+                    "title": "Engineering Drawings Information",
+                    "information": ["Dimension — the numerical value that defines the size, shape, location, surface texture, or geometric characteristic of a feature.", "Basic dimension — a numerical value defining the theoretically exact size, location, or orientation relative to a coordinate system. Basic dimensions are enclosed in a rectangular box & have no tolerance.", "Reference dimension — a numerical value enclosed in parentheses, provided for information only.", "Dimension line- is the thin solid line which shows the extent and direction of a dimension.", "Arrows — symbols at the ends of dimension lines showing the limits of the dimension, leaders, and cutting plane lines.", "Extension line - is the thin solid line perpendicular to a dimension line indicating which feature is associated with the dimension.", "Visible gap — there should be a visible gap of 1 mm between the feature's corners and the end of the extension line.", "Leader line - is the thin solid line used to indicate the feature with which a dimension, note, or symbol is associated.", "Limits of size — the largest acceptable size and the minimum acceptable size of a feature.", "Plus and minus dimension — the allowable positive and negative variance from the specified dimension.", "Diameter symbol — a symbol indicating that the dimension shows the diameter of a circle. The symbol used is the Greek letter phi Ø.", "Radius symbol — a symbol indicating that the dimension shows the radius of a circle. The radius symbol used is the capital letter R."],
+                    "images": ["PLACE IMAGE HERE"]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Shop Talk",
+            "thumbnail": "PLACE IMAGE HERE",
+            "trophy": "PLACE IMAGE HERE",
+            "modules": [
+                {
+                    "id": 1,
+                    "title": "Machine shop talk vs Math class talk",
+                    "information": [""],
+                    "images": ["PLACE IMAGE HERE"]
+                }
+            ]
+        }
+    ]
+}

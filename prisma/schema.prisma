@@ -7,29 +7,71 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum USER_ROLE {
+  REGULAR
+  ADMIN
+}
+
 model User {
-  id          String   @id @default(uuid())
-  createdAt   DateTime @default(now())
-  badgenumber Int
-  firstName   String
-  lastName    String
-  completed   ModuleCompletion[]
+  id             String           @id @default(uuid())
+  createdAt      DateTime         @default(now())
+  badgeNumber    Int?             @unique
+  firstName      String
+  lastName       String
+  role           USER_ROLE        @default(REGULAR)
+  courseProgress CourseProgress[]
+  userScore      TestScores[]
 }
 
-model Module {
+model Course {
+  id           String           @id @default(uuid())
+  title        String?
+  thumbnail    String?
+  userProgress CourseProgress[]
+  trophy       String?
+  modules      CourseModule[]
+  tests        Test[]
+}
+
+model CourseProgress {
   id        String   @id @default(uuid())
-  title     String
-  thumbnail String?
-  completedBy ModuleCompletion[]
+  createdAt DateTime @default(now())
+  progress  Int
+  user      User     @relation(fields: [userId], references: [id])
+  course    Course   @relation(fields: [courseId], references: [id])
+  userId    String
+  courseId  String
+
+  @@unique([userId, courseId])
 }
 
-model ModuleCompletion {
+model CourseModule {
+  id          String   @id @default(uuid())
+  title       String
+  information String[]
+  images      String[]
+  courseId    String
+  course      Course   @relation(fields: [courseId], references: [id])
+}
+
+model Test {
+  id          String       @id @default(uuid())
+  createdAt   DateTime     @default(now())
+  title       String
+  information String
+  images      String
+  answers     String[]
+  scores      TestScores[]
+  Course      Course      @relation(fields: [courseId], references: [id])
+  courseId    String
+}
+
+model TestScores {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
   user      User     @relation(fields: [userId], references: [id])
-  module    Module   @relation(fields: [moduleId], references: [id])
+  test      Test     @relation(fields: [testId], references: [id])
+  score     Int      @default(0)
+  testId    String
   userId    String
-  moduleId  String
-
-  @@unique([userId, moduleId])
 }
