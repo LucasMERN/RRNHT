@@ -1,5 +1,6 @@
 import AuthWrapper from '@/components/AuthWrapper';
 import { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
     title: "Regal Rexnord New Hire Training | Course Dashboard",
