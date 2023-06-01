@@ -1,6 +1,6 @@
 import AuthWrapper from '@/components/AuthWrapper';
 import { Metadata } from 'next';
-import '../../styles/global.css'
+import '../../styles/globals.css'
 
 export const metadata: Metadata = {
     title: "Regal Rexnord New Hire Training | Authorization Forms",
