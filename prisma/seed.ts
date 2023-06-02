@@ -4,13 +4,23 @@ import fs from 'fs'
 const jsonData = fs.readFileSync('prisma/courses.json', 'utf8')
 const { courses } = JSON.parse(jsonData)
 
-const num = 12345;
+function makeid(length: number) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
 
 async function main() {
   
     const user = await db.user.create({
         data: { 
-            badge: Math.floor(Math.random()*num),
+            badge: makeid(5),
             firstName: 'Lucas',
             lastName: 'Winkler',
         }

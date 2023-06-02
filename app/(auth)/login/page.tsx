@@ -1,5 +1,5 @@
-export default function Signin(){
-    return (
-        <div>Login plz</div>
-    )
+import AuthForm from "@/components/AuthForm";
+
+export default function Signin() {
+  return <AuthForm mode="login" />;
 }
