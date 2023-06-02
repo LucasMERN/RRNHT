@@ -6,6 +6,7 @@ interface Props {
     required?: boolean
     placeholder?: string
     value?: string | undefined | number
+    type?: string
     onChange?: (e: any) => void
 }
 

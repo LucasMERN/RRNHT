@@ -25,7 +25,7 @@ const fetcher = async ({ url, method, body, json = true }: FetcherOptions) => {
     }
 };
   
-export const register = async (user: { firstName: string; lastName: string; badge: string; }) => {
+export const register = async (user: { firstName: string; lastName: string; badge: string; password: string; }) => {
     return fetcher({
         url: "/api/register",
         method: "POST",
@@ -34,7 +34,7 @@ export const register = async (user: { firstName: string; lastName: string; badg
     });
 };
   
-export const login = async (user: { firstName: string; lastName: string; badge: string; }) => {
+export const login = async (user: { firstName: string; lastName: string; badge: string; password: string; }) => {
     return fetcher({
         url: "/api/login",
         method: "POST",

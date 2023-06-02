@@ -23,6 +23,7 @@ async function main() {
             badge: makeid(5),
             firstName: 'Lucas',
             lastName: 'Winkler',
+            password: 'hello'
         }
     });
 

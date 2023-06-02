@@ -10,7 +10,7 @@ export default async function signin(
   if (req.method === "POST") {
     const user = await db.user.findUnique({
       where: {
-        badge: await hashPassword(req.body.badge.toString()), //think its this "Type error: Type 'string' is not assignable to type 'number'." ?????
+        badge: req.body.badge, //think its this
       },
     });
 
@@ -20,7 +20,7 @@ export default async function signin(
       return;
     }
 
-    const isUser = await comparePasswords(req.body.badge.toString(), user.badge);
+    const isUser = await comparePasswords(req.body.password, user.password); //and this
 
     if (isUser) {
       const jwt = await createJWT(user);
@@ -33,13 +33,13 @@ export default async function signin(
         })
       );
       res.status(201);
-      res.end();
+      res.json({});
     } else {
       res.status(401);
       res.json({ error: "Invalid login" });
     }
   } else {
     res.status(402);
-    res.end();
+    res.json({});
   }
 }

@@ -18,6 +18,7 @@ model User {
   badge          String           @unique
   firstName      String
   lastName       String
+  password       String
   role           USER_ROLE        @default(REGULAR)
   courseProgress CourseProgress[]
   userScore      TestScores[]

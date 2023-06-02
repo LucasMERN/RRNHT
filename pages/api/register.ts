@@ -10,9 +10,10 @@ export default async function register(
   if (req.method === "POST") {
     const user = await db.user.create({
       data: {
-        badge: await hashPassword(req.body.badge.toString()),
+        password: await hashPassword(req.body.password),
         firstName: req.body.firstName,
         lastName: req.body.lastName,
+        badge: req.body.badge,
       },
     });
 
@@ -26,9 +27,9 @@ export default async function register(
       })
     );
     res.status(201);
-    res.end();
+    res.json({});
   } else {
     res.status(402);
-    res.end();
+    res.json({});
   }
 }

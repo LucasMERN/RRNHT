@@ -23,7 +23,7 @@ const loginContent = {
     buttonText: "Log In",
 };
 
-const initial = { firstName: "", lastName: "", badge: "" }; //initial state that can be used to reset the form. DO NOT MUTATE
+const initial = { firstName: "", lastName: "", badge: "", password: "" }; //initial state that can be used to reset the form. DO NOT MUTATE
 
 export default function AuthForm({ mode }: { mode: "register" | "login" }) {
     const [formState, setFormState] = useState({ ...initial }); //pass in a copy of the initial object for the initial state
@@ -91,7 +91,7 @@ export default function AuthForm({ mode }: { mode: "register" | "login" }) {
                 <div className="mb-8">
                     <Input
                     required
-                    placeholder="Badge Number"
+                    placeholder="Enter Badge Number Here"
                     value={formState.badge}
                     className="border-solid border-violet-950 border px-6 py-2 text-lg rounded-lg w-full placeholder:text-black"
                     onChange={(e) =>
@@ -99,6 +99,19 @@ export default function AuthForm({ mode }: { mode: "register" | "login" }) {
                     }
                     />
                 </div>
+                <div className="mb-8">
+                        <Input
+                        required
+                        type="password"
+                        placeholder="Enter Password Here"
+                        value={formState.password}
+                        className="border-solid border-violet-950 border px-6 py-2 text-lg rounded-lg w-full placeholder:text-black"
+                        onChange={(e) =>
+                            setFormState((s) => ({ ...s, password: e.target.value }))
+                        }
+                        />
+                    </div>
+                    
                 <div className="mb-8">
                     <div>
                     <Button type="submit" intent="auth">

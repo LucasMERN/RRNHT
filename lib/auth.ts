@@ -7,12 +7,16 @@ interface User {
     badge: string;
     firstName: string;
     lastName: string;
+    password: string;
 }
 
-export const hashPassword = (badge: string) => bcrypt.hash(badge, 10);
+export const hashPassword = (password: string) => bcrypt.hash(password, 10);
 
-export const comparePasswords = (plainTextBadge: string, hashedBadge: string) =>
-    bcrypt.compare(plainTextBadge, hashedBadge);
+export const comparePasswords = async (plainTextPassword: string, hashedPassword: string): Promise<boolean> => {
+    const isMatch = await bcrypt.compare(plainTextPassword, hashedPassword);
+    return isMatch;
+};
+
 
     export const createJWT = (user: User) => {
         // return jwt.sign({ id: user.id }, 'cookies')
