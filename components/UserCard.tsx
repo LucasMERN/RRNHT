@@ -10,7 +10,7 @@ const getData = async () => {
   return user;
 };
 
-const Greetings = async () => {
+const UserCard = async () => {
   const user = await getData();
 
   return (
@@ -26,6 +26,7 @@ const Greetings = async () => {
         </div>
         <div className="mb-4 flex flex-col">
             <h1 className="text-xl tracking-widest font-bold mb-4">
+                {/* @ts-expect-error Server Component */}
             {user.firstName} {user.lastName}
             </h1>
             <div className="flex flex-row">
@@ -48,4 +49,4 @@ const Greetings = async () => {
   );
 };
 
-export default Greetings;
+export default UserCard;

@@ -11,6 +11,7 @@ export default async function Page() {
     <div className="">
       <div className="">
         <div className="">
+            {/* @ts-expect-error Server Component */}
             <UserCard />
         </div>
       </div>
