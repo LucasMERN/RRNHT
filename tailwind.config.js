@@ -11,7 +11,8 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'auth': "url('/assets/auth-bg.png')"
+        'auth': "url('/assets/auth-bg.png')",
+        'header': "url('/assets/header-background.jpg')"
       },
     },
   },

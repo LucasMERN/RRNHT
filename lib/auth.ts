@@ -40,7 +40,7 @@ export const comparePasswords = async (plainTextPassword: string, hashedPassword
         return payload.payload as any;
     };
 
-    export const getUserFromCookie = async (cookies: { get: (arg0: string | undefined) => any; }) => {
+    export const getUserFromCookie = async (cookies: any) => {
         const jwt = cookies.get(process.env.COOKIE_NAME);
     
         const { id } = await validateJWT(jwt.value);
