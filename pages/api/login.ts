@@ -1,9 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { db } from "@/lib/db";
-import { comparePasswords, createJWT } from "@/lib/auth";
+import { comparePasswords, createJWT, hashPassword } from "@/lib/auth";
 import { serialize } from "cookie";
-
-const cookieName: string = process.env.COOKIE_NAME as string;
 
 export default async function signin(
   req: NextApiRequest,
@@ -12,7 +10,7 @@ export default async function signin(
   if (req.method === "POST") {
     const user = await db.user.findUnique({
       where: {
-        badge: req.body.badge.toString(),
+        badge: await hashPassword(req.body.badge.toString()), //think its this
       },
     });
 
@@ -28,13 +26,12 @@ export default async function signin(
       const jwt = await createJWT(user);
       res.setHeader(
         "Set-Cookie",
-        serialize(cookieName, jwt, {
+        serialize(process.env.COOKIE_NAME, jwt, {
           httpOnly: true,
           path: "/",
           maxAge: 60 * 60 * 24 * 7,
         })
       );
-      console.log("success")
       res.status(201);
       res.end();
     } else {

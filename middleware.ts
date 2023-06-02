@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { jwtVerify } from "jose";
 const PUBLIC_FILE = /\.(.*)$/;
 
-const verifyJWT = async (jwt: string | Uint8Array) => {
+// had to make this again here as the other one is in a file with bcrypt which is not supported on edge runtimes
+const verifyJWT = async (jwt) => {
   const { payload } = await jwtVerify(
     jwt,
     new TextEncoder().encode(process.env.JWT_SECRET)
@@ -11,15 +12,8 @@ const verifyJWT = async (jwt: string | Uint8Array) => {
   return payload;
 };
 
-export default async function middleware(req: { nextUrl: string | URL; cookies: { get: (arg0: string | undefined) => any; }; }, res: any) {
-    let pathname: string;
-
-    if (typeof req.nextUrl === 'string') {
-        pathname = new URL(req.nextUrl).pathname;
-      } else {
-        pathname = req.nextUrl.pathname;
-      }
-
+export default async function middleware(req, res) {
+  const { pathname } = req.nextUrl;
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
@@ -34,7 +28,7 @@ export default async function middleware(req: { nextUrl: string | URL; cookies: 
   const jwt = req.cookies.get(process.env.COOKIE_NAME);
 
   if (!jwt) {
-    pathname = "/login";
+    req.nextUrl.pathname = "/login";
     return NextResponse.redirect(req.nextUrl);
   }
 
@@ -43,7 +37,7 @@ export default async function middleware(req: { nextUrl: string | URL; cookies: 
     return NextResponse.next();
   } catch (e) {
     console.error(e);
-    pathname = "/login";
+    req.nextUrl.pathname = "/login";
     return NextResponse.redirect(req.nextUrl);
   }
 }
