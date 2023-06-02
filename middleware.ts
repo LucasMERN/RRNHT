@@ -32,7 +32,7 @@ export default async function middleware(req: { nextUrl: string | URL; cookies: 
     return NextResponse.next();
   }
 
-  const jwt = req.cookies.get(process.env.COOKIE_NAME);
+  const jwt = req.cookies.get(process.env.COOKIE_NAME as string);
 
   if (!jwt) {
     pathname = "/login";
