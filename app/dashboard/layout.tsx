@@ -1,4 +1,3 @@
-import AuthWrapper from '@/components/AuthWrapper';
 import { Metadata } from 'next';
 import '../../styles/globals.css'
 
@@ -11,8 +10,8 @@ export default function DashboardRootLayout({children,}: {children: React.ReactN
     return(
         <html lang='en'>
             <head />
-                <body className="h-screen w-screen px-40 py-24 bg-auth bg-no-repeat bg-cover">
-                    <AuthWrapper className="w-full h-full flex items-center justify-center">{children}</AuthWrapper>
+                <body className="h-screen w-screen p-6">
+                    <section className="w-full h-full flex items-center justify-center">{children}</section>
                 </body>
         </html>
     );
