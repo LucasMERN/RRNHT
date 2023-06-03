@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import { jwtVerify } from "jose";
 import { URL } from 'url';
+
 const PUBLIC_FILE = /\.(.*)$/;
 
-// had to make this again here as the other one is in a file with bcrypt which is not supported on edge runtimes
 const verifyJWT = async (jwt: string | Uint8Array) => {
   const { payload } = await jwtVerify(
     jwt,
@@ -32,8 +32,10 @@ export default async function middleware(
   const jwt = req.cookies.get(process.env.COOKIE_NAME);
 
   if (!jwt) {
-    req.nextUrl.pathname = "/register";
-    return NextResponse.redirect(req.nextUrl);
+    if (pathname !== "/register") {
+      req.nextUrl.pathname = "/register";
+      return NextResponse.redirect(req.nextUrl);
+    }
   }
 
   try {
@@ -41,7 +43,10 @@ export default async function middleware(
     return NextResponse.next();
   } catch (e) {
     console.error(e);
-    req.nextUrl.pathname = "/register";
-    return NextResponse.redirect(req.nextUrl);
+    if (pathname !== "/register") {
+      req.nextUrl.pathname = "/register";
+      return NextResponse.redirect(req.nextUrl);
+    }
   }
+
 }
