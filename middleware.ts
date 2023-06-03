@@ -32,7 +32,7 @@ export default async function middleware(
   const jwt = req.cookies.get(process.env.COOKIE_NAME);
 
   if (!jwt) {
-    if (pathname !== "/register") {
+    if (pathname !== "/login") {
       req.nextUrl.pathname = "/register";
       return NextResponse.redirect(req.nextUrl);
     }
@@ -43,7 +43,7 @@ export default async function middleware(
     return NextResponse.next();
   } catch (e) {
     console.error(e);
-    if (pathname !== "/register") {
+    if (pathname !== "/login") {
       req.nextUrl.pathname = "/register";
       return NextResponse.redirect(req.nextUrl);
     }
