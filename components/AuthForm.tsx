@@ -23,7 +23,7 @@ const loginContent = {
     buttonText: "Log In",
 };
 
-const initial = { firstName: "", lastName: "", badge: "", password: "" }; //initial state that can be used to reset the form. DO NOT MUTATE
+const initial = { firstName: "", lastName: "", badge: "", password: "", department: "" }; //initial state that can be used to reset the form. DO NOT MUTATE
 
 export default function AuthForm({ mode }: { mode: "register" | "login" }) {
     const [formState, setFormState] = useState({ ...initial }); //pass in a copy of the initial object for the initial state
@@ -80,7 +80,7 @@ export default function AuthForm({ mode }: { mode: "register" | "login" }) {
                     <div className="mb-8">
                         <Input
                         required
-                        placeholder="Enter Last name Here"
+                        placeholder="Enter Last Name Here"
                         value={formState.lastName}
                         className="border-solid border-violet-950 border px-6 py-2 text-lg rounded-lg w-full placeholder:text-black"
                         onChange={(e) =>
@@ -96,6 +96,17 @@ export default function AuthForm({ mode }: { mode: "register" | "login" }) {
                     className="border-solid border-violet-950 border px-6 py-2 text-lg rounded-lg w-full placeholder:text-black"
                     onChange={(e) =>
                         setFormState((s) => ({ ...s, badge: e.target.value }))
+                    }
+                    />
+                </div>
+                <div className="mb-8">
+                    <Input
+                    required
+                    placeholder="Enter Department Name Here"
+                    value={formState.badge}
+                    className="border-solid border-violet-950 border px-6 py-2 text-lg rounded-lg w-full placeholder:text-black"
+                    onChange={(e) =>
+                        setFormState((s) => ({ ...s, department: e.target.value }))
                     }
                     />
                 </div>

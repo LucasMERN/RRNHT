@@ -14,6 +14,7 @@ export default async function register(
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         badge: req.body.badge,
+        department: req.body.department
       },
     });
 
