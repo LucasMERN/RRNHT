@@ -103,7 +103,7 @@ export default function AuthForm({ mode }: { mode: "register" | "login" }) {
                     <Input
                     required
                     placeholder="Enter Department Name Here"
-                    value={formState.badge}
+                    value={formState.department}
                     className="border-solid border-violet-950 border px-6 py-2 text-lg rounded-lg w-full placeholder:text-black"
                     onChange={(e) =>
                         setFormState((s) => ({ ...s, department: e.target.value }))
