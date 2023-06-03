@@ -41,8 +41,13 @@ export const comparePasswords = async (plainTextPassword: string, hashedPassword
     };
 
     export const getUserFromCookie = async (cookies: any) => {
+        
         const jwt = cookies.get(process.env.COOKIE_NAME);
-    
+
+        // if(!jwt){
+            
+        // }
+        
         const { id } = await validateJWT(jwt.value);
     
         const user = await db.user.findUnique({

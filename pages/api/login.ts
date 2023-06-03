@@ -26,20 +26,20 @@ export default async function signin(
       const jwt = await createJWT(user);
       res.setHeader(
         "Set-Cookie",
-        serialize(process.env.COOKIE_NAME as string, jwt, {
+        serialize("Set-Cookie", jwt, {
           httpOnly: true,
           path: "/",
           maxAge: 60 * 60 * 24 * 7,
         })
       );
       res.status(201);
-      res.json({});
+      res.end();
     } else {
       res.status(401);
       res.json({ error: "Invalid login" });
     }
   } else {
     res.status(402);
-    res.json({});
+    res.end();
   }
 }
