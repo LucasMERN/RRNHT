@@ -21,7 +21,7 @@ export default function CourseCard(){
                             <span className='pr-2'>4 Modules</span>
                             <span>3 Tests</span>
                         </div>
-                        <span className='absolute bottom-2 right-2 flex flex-row'>
+                        <span className='absolute bottom-2 right-2 flex flex-row items-center'>
                             Start Training
                             <ArrowRight size={20} />
                         </span>

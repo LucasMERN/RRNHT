@@ -19,31 +19,46 @@ model User {
   firstName      String
   lastName       String
   password       String
+  department     String
+  myCourses      MyCourses[]
   role           USER_ROLE        @default(REGULAR)
   courseProgress CourseProgress[]
   userScore      TestScores[]
 }
 
 model Course {
-  id           String           @id @default(uuid())
-  title        String?
-  thumbnail    String?
-  userProgress CourseProgress[]
-  trophy       String?
-  modules      CourseModule[]
-  tests        Test[]
+  id          String         @id @default(uuid())
+  title       String?
+  thumbnail   String?
+  trophy      String?
+  modules     CourseModule[]
+  tests       Test[]
+  userCourses MyCourses[]
+}
+
+model MyCourses {
+  id             String           @id @default(uuid())
+  createdAt      DateTime         @default(now())
+  course         Course           @relation(fields: [courseId], references: [id])
+  user           User             @relation(fields: [userId], references: [id])
+  userId         String
+  courseId       String
+  courseProgress CourseProgress[]
+
+  @@unique([userId, courseId])
 }
 
 model CourseProgress {
-  id        String   @id @default(uuid())
-  createdAt DateTime @default(now())
-  progress  Int
-  user      User     @relation(fields: [userId], references: [id])
-  course    Course   @relation(fields: [courseId], references: [id])
-  userId    String
-  courseId  String
-
-  @@unique([userId, courseId])
+  id          String    @id @default(uuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  progress    Int
+  user        User      @relation(fields: [userId], references: [id])
+  myCourse    MyCourses @relation(fields: [myCoursesId], references: [id])
+  userId      String
+  myCoursesId String
+  
+  @@unique([userId, myCoursesId])
 }
 
 model CourseModule {

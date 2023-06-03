@@ -23,7 +23,8 @@ async function main() {
             badge: makeid(5),
             firstName: 'Lucas',
             lastName: 'Winkler',
-            password: 'hello'
+            password: 'hello',
+            department: 'Large Disc'
         }
     });
 
@@ -39,9 +40,9 @@ async function main() {
 
         const courseProgress = await db.courseProgress.create({
             data: {
-                progress: 0,
+                progress: Math.floor(Math.random()*100),
                 user: { connect: { id: user.id } },
-                course: { connect: { id: course.id } },
+                myCourse: { connect: { id: course.id } },
             },
         });
 
@@ -69,7 +70,7 @@ async function main() {
 
                 const testScores = await db.testScores.create({
                     data: {
-                        score: 0,
+                        score: Math.floor(Math.random()*100),
                         user: { connect: { id: user.id } },
                         test: { connect: { id: test.id } },
                     },
