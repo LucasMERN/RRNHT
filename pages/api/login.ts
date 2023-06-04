@@ -10,7 +10,7 @@ export default async function signin(
   if (req.method === "POST") {
     const user = await db.user.findUnique({
       where: {
-        badge: req.body.badge, //think its this
+        badge: req.body.badge,
       },
     });
 

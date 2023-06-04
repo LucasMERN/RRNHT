@@ -42,3 +42,12 @@ export const login = async (user: { firstName: string; lastName: string; badge: 
         json: false,
     });
 };
+
+export const logout = async (user: { firstName: string; lastName: string; badge: string; password: string; }) => {
+    return fetcher({
+        url: "/api/logout",
+        method: "POST",
+        body: user,
+        json: false,
+    });
+};
