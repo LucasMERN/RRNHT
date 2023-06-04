@@ -35,6 +35,7 @@ export default async function Page() {
                     <Trophies />
                 </section>
                 <section className="my-8">
+                    {/* @ts-expect-error Server Component */}
                     <CourseCard />
                 </section>
             </section>
