@@ -18,50 +18,52 @@ const getData = async () => {
 const CourseCard = async () => {
     const user = await getData();
   
-    // Fetch course data for each myCourse
-    const courses = await Promise.all(
-      user.myCourses.map(async (myCourse) => {
-        const course = await db.course.findUnique({
-          where: { id: myCourse.courseId },
-            include: {
+    if (user) {
+        // Fetch course data for each myCourse
+        const courses = await Promise.all(
+          user.myCourses.map(async (myCourse) => {
+            const course = await db.course.findUnique({
+              where: { id: myCourse.courseId },
+              include: {
                 modules: true,
                 tests: true,
-            }
-        });
-        return course;
-      })
-    );
+              },
+            });
+            return course;
+          })
+        );
   
     return (
-      <>
-        <ul className="flex flex-1 flex-row justify-between">
-          {courses.map((course) => (
-            <li key={course?.id}>
-              <div className="relative">
-                <h3 className="absolute top-2 left-2">{course?.title}</h3>
-                <div className="flex flex-row absolute top-8 left-2">
-                  <span className="pr-2">{course?.modules.length} Modules</span>
-                  <span>{course?.tests.length} Tests</span>
+        <>
+            <ul className="flex flex-1 flex-row justify-between">
+            {courses.map((course) => (
+                <li key={course?.id}>
+                <div className="relative">
+                    <h3 className="absolute top-2 left-2">{course?.title}</h3>
+                    <div className="flex flex-row absolute top-8 left-2">
+                    <span className="pr-2">{course?.modules.length} Modules</span>
+                    <span>{course?.tests.length} Tests</span>
+                    </div>
+                    <span className="absolute bottom-2 right-2 flex flex-row items-center">
+                    Start Training
+                    <ArrowRight size={20} />
+                    </span>
+                    <Image
+                    src="/assets/shoptalkcard.png"
+                    alt="card for course"
+                    style={{ objectFit: "contain" }}
+                    loading="lazy"
+                    height={300}
+                    width={300}
+                    className="rounded-2xl border-black border-2"
+                    />
                 </div>
-                <span className="absolute bottom-2 right-2 flex flex-row items-center">
-                  Start Training
-                  <ArrowRight size={20} />
-                </span>
-                <Image
-                  src="/assets/shoptalkcard.png"
-                  alt="card for course"
-                  style={{ objectFit: "contain" }}
-                  loading="lazy"
-                  height={300}
-                  width={300}
-                  className="rounded-2xl border-black border-2"
-                />
-              </div>
-            </li>
-          ))}
-        </ul>
-      </>
-    );
-  };
+                </li>
+            ))}
+            </ul>
+        </>
+        );
+    };
+};
 
 export default CourseCard;
