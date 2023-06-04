@@ -49,7 +49,7 @@ const CourseCard = async () => {
                     <ArrowRight size={20} />
                     </span>
                     <Image
-                    src="/assets/shoptalkcard.png"
+                    src={course?.thumbnail  || '/assets/shoptalkcard.png'}
                     alt="card for course"
                     style={{ objectFit: "contain" }}
                     loading="lazy"
