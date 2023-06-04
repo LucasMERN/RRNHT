@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "Using Precision Tools",
-            "thumbnail": "PLACE IMAGE HERE",
+            "thumbnail": "/assets/precisiontoolscard.png",
             "trophy": "Precision Measuring",
             "modules": [
                 {
@@ -81,7 +81,7 @@
         {
             "id": 2,
             "title": "Understanding Blueprints",
-            "thumbnail": "PLACE IMAGE HERE",
+            "thumbnail": "/assets/blueprintcard.png",
             "trophy": "Blueprint Connoisseur",
             "modules": [
                 {
@@ -176,7 +176,7 @@
         {
             "id": 3,
             "title": "Shop Talk",
-            "thumbnail": "PLACE IMAGE HERE",
+            "thumbnail": "/assets/shoptalkcard.png",
             "trophy": "Smooth Talker",
             "modules": [
                 {

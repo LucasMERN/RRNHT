@@ -22,7 +22,7 @@ export default async function middleware(
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/static") ||
-    pathname.startsWith("/signin") ||
+    pathname.startsWith("/login") ||
     pathname.startsWith("/register") ||
     PUBLIC_FILE.test(pathname)
   ) {

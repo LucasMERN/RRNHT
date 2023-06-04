@@ -32,7 +32,8 @@ const UserCard = async () => {
                 {user.firstName} {user.lastName}
                 </h1>
                 <div className="flex flex-row justify-between">
-                    <span>Large Disc</span>
+                    {/* @ts-expect-error Server Component */}
+                    <span>{user.department}</span>
                     <div className="flex flex-col">
                         <span>Precision Measuring Tools</span>
                         <span className="flex flex-row">Continue Training<ArrowRight size={20} /></span>

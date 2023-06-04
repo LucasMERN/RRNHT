@@ -24,7 +24,7 @@ async function main() {
             firstName: 'Lucas',
             lastName: 'Winkler',
             password: 'hello',
-            department: 'Large Disc'
+            department: 'Large Disc',
         }
     });
 
@@ -38,13 +38,27 @@ async function main() {
             }
         });
 
-        const courseProgress = await db.courseProgress.create({
+        const myCourses = await db.myCourses.create({
+            data: {
+              user: { connect: { id: user.id } },
+              course: { connect: { id: course.id } },
+            },
+          });
+
+          const courseProgress = await db.courseProgress.create({
             data: {
                 progress: Math.floor(Math.random()*100),
                 user: { connect: { id: user.id } },
-                myCourse: { connect: { id: course.id } },
+                myCourse: { connect: { id: myCourses.id } },
             },
         });
+
+          const updatedUser = await db.user.update({
+            where: { id: user.id },
+            data: {
+              myCourses: { connect: { id: myCourses.id } },
+            },
+          });
 
         for (const myModule of key.modules) {
             const courseModule = await db.courseModule.create({

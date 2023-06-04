@@ -8,13 +8,22 @@ export default async function register(
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
+    const courses = await db.course.findMany();
     const user = await db.user.create({
       data: {
         password: await hashPassword(req.body.password),
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         badge: req.body.badge,
-        department: req.body.department
+        department: req.body.department,
+        myCourses: {
+          create: courses.map((course) => ({
+            course: { connect: { id: course.id } },
+          })),
+        },
+      },
+      include: {
+        myCourses: true,
       },
     });
 

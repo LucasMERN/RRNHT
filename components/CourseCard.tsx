@@ -3,40 +3,65 @@ import { ArrowRight } from "react-feather";
 import { getUserFromCookie } from "@/lib/auth";
 import { cookies } from "next/headers";
 import { delay } from "@/lib/async";
+import { db } from '@/lib/db';
 
 const getData = async () => {
-    await delay(5000);
-    const user = await getUserFromCookie(cookies());
-    return user;
+  await delay(5000);
+  const user = await getUserFromCookie(cookies());
+  const userWithCourses = await db.user.findUnique({
+    where: { id: user?.id },
+    include: { myCourses: true },
+  });
+  return userWithCourses;
 };
 
-export default function CourseCard(){
-    return(
-        <>
-            <ul className="flex flex-1 flex-row justify-between">
-                <li>
-                    <div className='relative'>
-                        <h3 className='absolute top-2 left-2'>Understanding Blueprints</h3>
-                        <div className='flex flex-row absolute top-8 left-2'>
-                            <span className='pr-2'>4 Modules</span>
-                            <span>3 Tests</span>
-                        </div>
-                        <span className='absolute bottom-2 right-2 flex flex-row items-center'>
-                            Start Training
-                            <ArrowRight size={20} />
-                        </span>
-                        <Image
-                        src='/assets/blueprintcard.png'
-                        alt='card for course'
-                        style={{objectFit: "contain"}}
-                        loading='lazy'
-                        height={300}
-                        width={300}
-                        className='rounded-2xl border-black border-2'
-                        />
-                    </div>
-                </li>
-            </ul>
-        </>
-    )
-}
+const CourseCard = async () => {
+    const user = await getData();
+  
+    // Fetch course data for each myCourse
+    const courses = await Promise.all(
+      user.myCourses.map(async (myCourse) => {
+        const course = await db.course.findUnique({
+          where: { id: myCourse.courseId },
+            include: {
+                modules: true,
+                tests: true,
+            }
+        });
+        return course;
+      })
+    );
+  
+    return (
+      <>
+        <ul className="flex flex-1 flex-row justify-between">
+          {courses.map((course) => (
+            <li key={course?.id}>
+              <div className="relative">
+                <h3 className="absolute top-2 left-2">{course?.title}</h3>
+                <div className="flex flex-row absolute top-8 left-2">
+                  <span className="pr-2">{course?.modules.length} Modules</span>
+                  <span>{course?.tests.length} Tests</span>
+                </div>
+                <span className="absolute bottom-2 right-2 flex flex-row items-center">
+                  Start Training
+                  <ArrowRight size={20} />
+                </span>
+                <Image
+                  src="/assets/shoptalkcard.png"
+                  alt="card for course"
+                  style={{ objectFit: "contain" }}
+                  loading="lazy"
+                  height={300}
+                  width={300}
+                  className="rounded-2xl border-black border-2"
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+      </>
+    );
+  };
+
+export default CourseCard;
