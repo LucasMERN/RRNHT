@@ -2,12 +2,8 @@ import CourseCard from "@/components/CourseCard";
 import SideBar from "@/components/SideBar";
 import Trophies from "@/components/Trophy";
 import UserCard from "@/components/UserCard";
-import { delay } from "@/lib/async";
-import { getUserFromCookie } from "@/lib/auth";
-import { db } from "@/lib/db";
-import { cookies } from "next/headers";
+import UserSkeleton from "@/components/UserSkeleton";
 import Image from "next/image";
-import Link from "next/link";
 import { Suspense } from "react";
 
 export default async function Page() {
@@ -27,8 +23,10 @@ export default async function Page() {
             </section>
             <section className="w-4/5 mx-8">
                 <section className="my-8 pb-6 flex flex-row">
-                    {/* @ts-expect-error Server Component */}
-                    <UserCard />
+                    <Suspense fallback={<UserSkeleton />}>
+                        {/* @ts-expect-error Server Component */}
+                        <UserCard />
+                    </Suspense>
                 </section>
                 <section className="my-8 border-b-2 pb-6 border-blue-700">
                     {/* @ts-expect-error Server Component */}

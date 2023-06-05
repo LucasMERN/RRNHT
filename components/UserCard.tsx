@@ -1,3 +1,5 @@
+'use-client'
+
 import { getUserFromCookie } from "@/lib/auth";
 import { cookies } from "next/headers";
 import { delay } from "@/lib/async";
@@ -5,7 +7,7 @@ import Image from "next/image";
 import { ArrowRight } from "react-feather";
 
 const getData = async () => {
-    await delay(5000);
+    await delay(1000);
     const user = await getUserFromCookie(cookies());
     return user;
 };
