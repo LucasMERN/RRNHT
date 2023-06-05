@@ -18,4 +18,4 @@ const UserSkeleton = () => {
     );
   };
 
-  export default UserSkeleton;
+export default UserSkeleton;

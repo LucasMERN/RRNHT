@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import React, { ReactNode } from "react";
 
 interface Props {
     className?: string
@@ -20,6 +19,4 @@ const Input = ({ className, ...props}: Props) => {
     );
 };
 
-
 export default Input;
-//TODO: add cva to this like I did with the button component to be able to switch the use of this input for both quiz entries and auth form
