@@ -6,7 +6,7 @@ import { delay } from "@/lib/async";
 import { db } from '@/lib/db';
 
 const getData = async () => {
-  await delay(5000);
+  await delay(1000);
   const user = await getUserFromCookie(cookies());
   const userWithCourses = await db.user.findUnique({
     where: { id: user?.id },
